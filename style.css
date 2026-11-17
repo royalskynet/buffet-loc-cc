@@ -1,0 +1,23 @@
+:root { color-scheme: light dark; --bg: #0a0b0d; --fg: #e8e8ea; --muted: #a0a0a8; --link: #7cc4ff; --line: #24262b; }
+@media (prefers-color-scheme: light) {
+  :root { --bg: #fafafa; --fg: #1a1a1c; --muted: #555; --link: #0a68c4; --line: #dcdce0; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif; line-height: 1.7;
+}
+a { color: var(--link); }
+header, main, footer { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1.5rem; }
+header { display: flex; gap: 1.25rem; align-items: baseline; border-bottom: 1px solid var(--line); }
+header .brand { font-weight: 700; font-size: 1.15rem; color: var(--fg); text-decoration: none; margin-right: auto; }
+header nav a { text-decoration: none; margin-left: 1rem; }
+header nav a[aria-current="page"] { color: var(--fg); font-weight: 600; }
+h1 { font-size: 2rem; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; }
+p, li { color: var(--muted); }
+ul.list { list-style: none; padding: 0; margin: 0; }
+ul.list li { padding: .75rem 0; border-bottom: 1px solid var(--line); }
+ul.list li:last-child { border-bottom: 0; }
+.empty { color: var(--muted); font-style: italic; }
+footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); margin-top: 2rem; }
